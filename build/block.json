@@ -13,28 +13,6 @@
   "attributes": {
     "blockID": {
       "type": "string"
-    },
-    "imgID": {
-      "type": "number"
-    },
-    "imgSrc": {
-      "type": "string",
-      "default": "https://placehold.co/2000x1500"
-    },
-    "imgAlt": {
-      "type": "string"
-    },
-    "imgWidth": {
-      "type": "number"
-    },
-    "imgHeight": {
-      "type": "number"
-    },
-    "imgSrcset": {
-      "type": "string"
-    },
-    "imgSizes": {
-      "type": "string"
     }
   },
   "textdomain": "hart-services-block",
