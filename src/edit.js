@@ -6,7 +6,9 @@ import './editor.scss';
 export default function Edit(props) {
 	return (
 		<section { ...useBlockProps() }>
-			<InnerBlocks />
+			<InnerBlocks
+				allowedBlocks={[ "create-block/hart-service-item-block" ]}
+			/>
 		</section>
 	);
 }

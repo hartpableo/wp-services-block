@@ -3,8 +3,8 @@
 	"apiVersion": 3,
 	"name": "create-block/hart-services-block",
 	"version": "0.1.0",
-	"title": "Hart Services Block",
-	"category": "widgets",
+	"title": "Custom Services Block",
+	"category": "design",
 	"icon": "star-filled",
 	"description": "A customized block that presents/displays a brand/company's services.",
 	"supports": {
@@ -40,6 +40,5 @@
 	"textdomain": "hart-services-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+	"style": "file:./style-index.css"
 }
