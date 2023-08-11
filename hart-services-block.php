@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:       Hart Services Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       [Hart] Custom Services Block
+ * Description:       A customized block that presents/displays a brand/company's services.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Hart Pableo
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       hart-services-block

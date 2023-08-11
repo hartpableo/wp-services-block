@@ -5,10 +5,37 @@
 	"version": "0.1.0",
 	"title": "Hart Services Block",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "star-filled",
+	"description": "A customized block that presents/displays a brand/company's services.",
 	"supports": {
 		"html": false
+	},
+	"attributes": {
+		"blockID": {
+			"type": "string"
+		},
+		"imgID": {
+			"type": "number"
+		},
+		"imgSrc": {
+			"type": "string",
+			"default": "https://placehold.co/2000x1500"
+		},
+		"imgAlt": {
+			"type": "string"
+		},
+		"imgWidth": {
+			"type": "number"
+		},
+		"imgHeight": {
+			"type": "number"
+		},
+		"imgSrcset": {
+			"type": "string"
+		},
+		"imgSizes": {
+			"type": "string"
+		}
 	},
 	"textdomain": "hart-services-block",
 	"editorScript": "file:./index.js",
