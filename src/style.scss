@@ -1,0 +1,48 @@
+.services-block {
+  --spacing: 15px;
+  --spacing-n: -15px;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+  * {
+    box-sizing: border-box;
+  }
+  .services-row {
+    margin: 0 var(--spacing-n);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @for $i from 1 through 6 {
+    &.has-#{$i}-cols {
+      .service-item {
+        --width: calc(100% / #{$i});
+        max-width: var(--width);
+        flex: 0 0 var(--width);
+      }
+    }
+  }
+}
+
+.service-item {
+  padding: 0 var(--spacing) var(--spacing);
+}
+
+.service-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 55%;
+}
+
+.service-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-name {
+  margin: 1em 0 0 !important;
+}

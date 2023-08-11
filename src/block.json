@@ -13,6 +13,10 @@
 	"attributes": {
 		"blockID": {
 			"type": "string"
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
 		}
 	},
 	"textdomain": "hart-services-block",

@@ -1,7 +1,7 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, SelectControl, ToggleControl } from '@wordpress/components';
-import { title } from '@wordpress/icons';
+import { useBlockProps, RichText, InspectorControls, MediaUpload } from '@wordpress/block-editor';
+import { PanelBody, SelectControl, ToggleControl, Button } from '@wordpress/components';
+import { title, image } from '@wordpress/icons';
 import { Link } from '@10up/block-components';
 
 export default function Edit(props) {
@@ -26,6 +26,31 @@ export default function Edit(props) {
 			serviceLink: null,
 			linkOpenNewTab: null
 	});
+
+	const onSelectImage = img => {
+		let srcSet = `${img.sizes.full.url} ${img.sizes.full.width}w`;
+		setAttributes({
+			imgID: img.id,
+			imgSrc: img.url,
+			imgAlt: img.alt || 'Background Image',
+			imgWidth: img.width,
+			imgHeight: img.height,
+			imgSrcset: srcSet,
+			imgSizes: "100vw"
+		})
+	}
+
+	const onRemoveImage = () => {
+		setAttributes({
+			imgID: null,
+			imgSrc: "https://placehold.co/450x500",
+			imgAlt: null,
+			imgSrcset: null,
+			imgSizes: null,
+			imgWidth: null,
+			imgHeight: null
+		})
+	}
 
 	return (
 		<>
@@ -56,12 +81,57 @@ export default function Edit(props) {
 						} }
 					/>
 				</PanelBody>
+				<PanelBody title="Service Image" icon={ image } initialOpen={ false }>
+					<MediaUpload
+							onSelect={ onSelectImage }
+							allowedTypes={ [ 'image' ] }
+							value={ imgID }
+							render={({ open }) => (
+								<>
+									<Button
+										className={ `hp-custom-btn ${!imgID ? 'editing' : 'preview'}` }
+										onClick={ open }
+									>
+										<img src={ imgSrc } alt={ imgAlt } srcset={ imgSrcset } sizes={ imgSizes } width={ imgWidth } height={ imgHeight } loading="lazy" />
+										<div className='hp-btn--img-edit'>
+											{ !imgID && 'Set Image' }
+											{ !!imgID && imgSrc && 'Change Image' }
+										</div>
+									</Button>
+									{
+										!!imgID && imgSrc && (
+											<Button
+												className="hp-custom-btn hp-custom-delete-btn" 
+												isLink 
+												isDestructive
+												onClick={ onRemoveImage }
+											>
+												Delete Image
+											</Button>
+										)
+									}
+								</>
+							)}
+						/>
+				</PanelBody>
 			</InspectorControls>
 			
 			<div { ...useBlockProps({
 				id: `service--${blockID}`,
 				className: `service-item`
 			}) }>
+				<div className="service-img-wrapper">
+					<img 
+						className="service-img" 
+						src={ imgSrc } 
+						alt={ imgAlt } 
+						srcset={ imgSrcset } 
+						sizes={ imgSizes } 
+						width={ imgWidth } 
+						height={ imgHeight } 
+						loading="lazy" 
+					/>
+				</div>
 				{
 					!hasLink ? (
 						<RichText

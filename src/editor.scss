@@ -1,0 +1,80 @@
+.hp-custom-btn {
+  display: block;
+  width: 100%;
+  height: fit-content;
+}
+
+.hp-custom-btn:not(.hp-custom-delete-btn) {
+  border: 1px solid var(--wp-admin-theme-color,#007cba);
+}
+
+.hp-custom-btn.preview {
+  float: none;
+  padding: 0;
+}
+
+.hp-custom-btn.editing {
+  padding: 0;
+}
+
+.hp-custom-delete-btn {
+  margin-top: .5em !important;
+}
+
+.hp-btn--img-edit {
+  padding: .65em 0.3em;
+  line-height: 1;
+}
+
+.services-block {
+  --spacing: 15px;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+  display: block;
+  > .block-editor-inner-blocks {
+    > .block-editor-block-list__layout {
+      margin: 0 var(--spacing-n);
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  @for $i from 1 through 6 {
+    &.has-#{$i}-cols {
+      > .block-editor-inner-blocks {
+        > .block-editor-block-list__layout {
+          > [aria-label="Block: Service Item"],
+          .block-list-appender {
+            --width: calc(100% / #{$i});
+            max-width: var(--width);
+            flex: 0 0 var(--width);
+          }
+        }
+      }
+    }
+  }
+
+  .block-list-appender {
+    position: static !important;
+    padding: 0 var(--spacing) var(--spacing);
+    > button {
+      min-height: 150px;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      border: 1px dashed #333;
+      width: 100% !important;
+      height: 100% !important;
+      background-color: transparent  !important;
+      svg {
+        color: #333;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.service-item {
+  max-width: none !important;
+  flex: unset !important;
+}

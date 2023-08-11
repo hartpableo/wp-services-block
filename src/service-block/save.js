@@ -12,10 +12,22 @@ export default function save(props) {
 	const rel = linkOpenNewTab ? 'noopener noreferrer' : 'noopener';
 
 	return (
-		<section { ...useBlockProps.save({
+		<div { ...useBlockProps.save({
 			id: `service--${blockID}`,
 			className: `service-item`
 		}) }>
+			<div className="service-img-wrapper">
+				<img 
+					className="service-img" 
+					src={ imgSrc } 
+					alt={ imgAlt } 
+					srcset={ imgSrcset } 
+					sizes={ imgSizes } 
+					width={ imgWidth } 
+					height={ imgHeight } 
+					loading="lazy" 
+				/>
+			</div>
 		 	{
 		 		!hasLink ? (
 		 			<RichText.Content
@@ -34,6 +46,6 @@ export default function save(props) {
 		 			</a>
 		 		)
 		 	}
-		</section>
+		</div>
 	);
 }

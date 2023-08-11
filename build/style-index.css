@@ -1,4 +1,76 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+.services-block {
+  --spacing: 15px;
+  --spacing-n: -15px;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+.services-block * {
+  box-sizing: border-box;
+}
+.services-block .services-row {
+  margin: 0 var(--spacing-n);
+  display: flex;
+  flex-wrap: wrap;
+}
+.services-block.has-1-cols .service-item {
+  --width: calc(100% / 1);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-2-cols .service-item {
+  --width: calc(100% / 2);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-3-cols .service-item {
+  --width: calc(100% / 3);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-4-cols .service-item {
+  --width: calc(100% / 4);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-5-cols .service-item {
+  --width: calc(100% / 5);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-6-cols .service-item {
+  --width: calc(100% / 6);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
 
+.service-item {
+  padding: 0 var(--spacing) var(--spacing);
+}
+
+.service-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 55%;
+}
+
+.service-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.service-name {
+  margin: 1em 0 0 !important;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

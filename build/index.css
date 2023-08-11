@@ -1,4 +1,105 @@
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
   \****************************************************************************************************************************************************************************************************************************************/
+.hp-custom-btn {
+  display: block;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 
+.hp-custom-btn:not(.hp-custom-delete-btn) {
+  border: 1px solid var(--wp-admin-theme-color, #007cba);
+}
+
+.hp-custom-btn.preview {
+  float: none;
+  padding: 0;
+}
+
+.hp-custom-btn.editing {
+  padding: 0;
+}
+
+.hp-custom-delete-btn {
+  margin-top: 0.5em !important;
+}
+
+.hp-btn--img-edit {
+  padding: 0.65em 0.3em;
+  line-height: 1;
+}
+
+.services-block {
+  --spacing: 15px;
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+  display: block;
+}
+.services-block > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  margin: 0 var(--spacing-n);
+  display: flex;
+  flex-wrap: wrap;
+}
+.services-block.has-1-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+.services-block.has-1-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  --width: calc(100% / 1);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-2-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+.services-block.has-2-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  --width: calc(100% / 2);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+.services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  --width: calc(100% / 3);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+.services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  --width: calc(100% / 4);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+.services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  --width: calc(100% / 5);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+.services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+  --width: calc(100% / 6);
+  max-width: var(--width);
+  flex: 0 0 var(--width);
+}
+.services-block .block-list-appender {
+  position: static !important;
+  padding: 0 var(--spacing) var(--spacing);
+}
+.services-block .block-list-appender > button {
+  min-height: 150px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #333;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: transparent !important;
+}
+.services-block .block-list-appender > button svg {
+  color: #333;
+  width: 50px;
+  height: 50px;
+}
+
+.service-item {
+  max-width: none !important;
+  flex: unset !important;
+}
+
+/*# sourceMappingURL=index.css.map*/
