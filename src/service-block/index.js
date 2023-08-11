@@ -2,7 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
 
 import Edit from './edit';
-import Save from './save';
+import save from './save';
 
 registerBlockType( 'create-block/hart-service-item-block', {
   title: __('Service Item', 'hart-services-block'),
@@ -57,5 +57,5 @@ registerBlockType( 'create-block/hart-service-item-block', {
     }
   },
   edit: Edit,
-	save: () => <>save</>,
+	save,
 } );

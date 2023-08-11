@@ -69,16 +69,17 @@ export default function Edit(props) {
 							value={ serviceName }
 							onChange={ val => setAttributes({ serviceName: val }) }
 							placeholder='Enter Service Name here...'
+							className="service-name"
 						/>
 					) : (
-						<Link 
+						<Link
 							value={ serviceName }
 							url={ serviceLink }
 							opensInNewTab={ linkOpenNewTab }
 							onTextChange={ handleTextChange }
 							onLinkChange={ handleLinkChange }
 							onLinkRemove={ handleLinkRemove }
-							className='service-link'
+							className='service-name has-link'
 							placeholder='Enter Service Name here...'
             />
 					)
