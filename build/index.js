@@ -9526,7 +9526,7 @@ function Edit(props) {
   const onRemoveImage = () => {
     setAttributes({
       imgID: null,
-      imgSrc: "https://placehold.co/450x500",
+      imgSrc: "https://placehold.co/600x450",
       imgAlt: null,
       imgSrcset: null,
       imgSizes: null,
@@ -9677,7 +9677,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     imgSrc: {
       type: "string",
-      default: "https://placehold.co/450x500"
+      default: "https://placehold.co/600x450"
     },
     imgAlt: {
       type: "string"

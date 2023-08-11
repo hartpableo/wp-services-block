@@ -43,7 +43,7 @@ export default function Edit(props) {
 	const onRemoveImage = () => {
 		setAttributes({
 			imgID: null,
-			imgSrc: "https://placehold.co/450x500",
+			imgSrc: "https://placehold.co/600x450",
 			imgAlt: null,
 			imgSrcset: null,
 			imgSizes: null,
