@@ -78,3 +78,9 @@
   max-width: none !important;
   flex: unset !important;
 }
+
+.service-img--inspector {
+  max-height: 160px;
+  object-fit: cover;
+  width: 100%;
+}

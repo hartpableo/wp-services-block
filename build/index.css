@@ -102,4 +102,11 @@
   flex: unset !important;
 }
 
+.service-img--inspector {
+  max-height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map*/

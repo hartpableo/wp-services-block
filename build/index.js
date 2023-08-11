@@ -9580,7 +9580,7 @@ function Edit(props) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: "Service Image",
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_6__["default"],
-    initialOpen: false
+    initialOpen: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
     onSelect: onSelectImage,
     allowedTypes: ['image'],
@@ -9591,6 +9591,7 @@ function Edit(props) {
       className: `hp-custom-btn ${!imgID ? 'editing' : 'preview'}`,
       onClick: open
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+      className: "service-img--inspector",
       src: imgSrc,
       alt: imgAlt,
       srcset: imgSrcset,

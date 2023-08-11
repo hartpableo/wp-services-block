@@ -81,38 +81,38 @@ export default function Edit(props) {
 						} }
 					/>
 				</PanelBody>
-				<PanelBody title="Service Image" icon={ image } initialOpen={ false }>
+				<PanelBody title="Service Image" icon={ image } initialOpen={ true }>
 					<MediaUpload
-							onSelect={ onSelectImage }
-							allowedTypes={ [ 'image' ] }
-							value={ imgID }
-							render={({ open }) => (
-								<>
-									<Button
-										className={ `hp-custom-btn ${!imgID ? 'editing' : 'preview'}` }
-										onClick={ open }
-									>
-										<img src={ imgSrc } alt={ imgAlt } srcset={ imgSrcset } sizes={ imgSizes } width={ imgWidth } height={ imgHeight } loading="lazy" />
-										<div className='hp-btn--img-edit'>
-											{ !imgID && 'Set Image' }
-											{ !!imgID && imgSrc && 'Change Image' }
-										</div>
-									</Button>
-									{
-										!!imgID && imgSrc && (
-											<Button
-												className="hp-custom-btn hp-custom-delete-btn" 
-												isLink 
-												isDestructive
-												onClick={ onRemoveImage }
-											>
-												Delete Image
-											</Button>
-										)
-									}
-								</>
-							)}
-						/>
+						onSelect={ onSelectImage }
+						allowedTypes={ [ 'image' ] }
+						value={ imgID }
+						render={({ open }) => (
+							<>
+								<Button
+									className={ `hp-custom-btn ${!imgID ? 'editing' : 'preview'}` }
+									onClick={ open }
+								>
+									<img className="service-img--inspector" src={ imgSrc } alt={ imgAlt } srcset={ imgSrcset } sizes={ imgSizes } width={ imgWidth } height={ imgHeight } loading="lazy" />
+									<div className='hp-btn--img-edit'>
+										{ !imgID && 'Set Image' }
+										{ !!imgID && imgSrc && 'Change Image' }
+									</div>
+								</Button>
+								{
+									!!imgID && imgSrc && (
+										<Button
+											className="hp-custom-btn hp-custom-delete-btn" 
+											isLink 
+											isDestructive
+											onClick={ onRemoveImage }
+										>
+											Delete Image
+										</Button>
+									)
+								}
+							</>
+						)}
+					/>
 				</PanelBody>
 			</InspectorControls>
 			
