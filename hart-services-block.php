@@ -24,3 +24,23 @@ function create_block_hart_services_block_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'create_block_hart_services_block_block_init' );
+
+/**
+ * Custom Image Sizes
+ */
+function hart_services_block_add_image_sizes() {
+	if ( ! current_theme_supports( 'post-thumbnails' ) ) {
+		add_theme_support( 'post-thumbnails' );
+	}
+	add_image_size('service_image_desktop', 790, 780, true);
+  add_image_size('service_image_mobile', 690, 480, true);
+}
+add_action( 'after_setup_theme', 'hart_services_block_add_image_sizes' );
+
+function hart_services_block_custom_sizes( $sizes ) {
+  return array_merge( $sizes, array(
+    'service_image_desktop' => 'Desktop: Service Image',
+		'service_image_mobile' => 'Mobile: Service Image',
+  ) );
+}
+add_filter( 'image_size_names_choose', 'hart_services_block_custom_sizes' );

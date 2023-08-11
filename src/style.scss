@@ -1,4 +1,9 @@
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: var(--wp--style--global--wide-size) !important;
+}
+
 .services-block {
+  --theme-color: #007cba;
   --spacing: 15px;
   --spacing-n: -15px;
   padding-left: var(--spacing);
@@ -14,16 +19,32 @@
   @for $i from 1 through 6 {
     &.has-#{$i}-cols {
       .service-item {
-        --width: calc(100% / #{$i});
+        --width: 100%;
         max-width: var(--width);
         flex: 0 0 var(--width);
+        @if $i >= 2 {
+          @media all and (min-width: 576px) {
+            --width: calc(100% / 2);
+          }
+        }
+        @if $i >= 3 {
+          @media all and (min-width: 992px) {
+            --width: calc(100% / 3);
+          }
+        }
+        @if $i >= 4 {
+          @media all and (min-width: 1200px) {
+            --width: calc(100% / #{$i});
+          }
+        }
       }
     }
   }
 }
 
 .service-item {
-  padding: 0 var(--spacing) var(--spacing);
+  padding: 0 var(--spacing);
+  margin-bottom: var(--spacing);
 }
 
 .service-img-wrapper {
@@ -44,5 +65,10 @@
 }
 
 .service-name {
-  margin: 1em 0 0 !important;
+  padding: .7em .5em !important;
+  font-weight: 600;
+  margin: 0;
+  background-color: var(--theme-color);
+  color: #fff !important;
+  display: block;
 }

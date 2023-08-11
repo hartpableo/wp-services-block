@@ -47,6 +47,21 @@
             --width: calc(100% / #{$i});
             max-width: var(--width);
             flex: 0 0 var(--width);
+            @if $i >= 2 {
+              @media all and (min-width: 576px) {
+                --width: calc(100% / 2);
+              }
+            }
+            @if $i >= 3 {
+              @media all and (min-width: 992px) {
+                --width: calc(100% / 3);
+              }
+            }
+            @if $i >= 4 {
+              @media all and (min-width: 1200px) {
+                --width: calc(100% / #{$i});
+              }
+            }
           }
         }
       }
@@ -55,7 +70,8 @@
 
   .block-list-appender {
     position: static !important;
-    padding: 0 var(--spacing) var(--spacing);
+    padding: 0 var(--spacing);
+    margin-bottom: var(--spacing);
     > button {
       min-height: 150px;
       display: flex !important;

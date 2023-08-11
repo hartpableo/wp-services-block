@@ -9512,21 +9512,21 @@ function Edit(props) {
     linkOpenNewTab: null
   });
   const onSelectImage = img => {
-    let srcSet = `${img.sizes.full.url} ${img.sizes.full.width}w`;
+    let srcSet = `${img.sizes.service_image_desktop.url} ${img.sizes.service_image_desktop.width}w, ${img.sizes.service_image_mobile.url} ${img.sizes.service_image_mobile.width}w`;
     setAttributes({
       imgID: img.id,
       imgSrc: img.url,
-      imgAlt: img.alt || 'Background Image',
-      imgWidth: img.width,
-      imgHeight: img.height,
+      imgAlt: img.alt || 'Service Featured Image',
+      imgWidth: img.sizes.service_image_desktop.width,
+      imgHeight: img.sizes.service_image_desktop.height,
       imgSrcset: srcSet,
-      imgSizes: "100vw"
+      imgSizes: `(min-width: 1200px) ${img.sizes.service_image_desktop.width}px, (min-width: 992px) 301px, (min-width: 576px) 258px, 100vw`
     });
   };
   const onRemoveImage = () => {
     setAttributes({
       imgID: null,
-      imgSrc: "https://placehold.co/600x450",
+      imgSrc: "https://placehold.co/1000x1000",
       imgAlt: null,
       imgSrcset: null,
       imgSizes: null,
@@ -9677,7 +9677,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     imgSrc: {
       type: "string",
-      default: "https://placehold.co/600x450"
+      default: "https://placehold.co/1000x1000"
     },
     imgAlt: {
       type: "string"

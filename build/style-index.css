@@ -1,7 +1,12 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: var(--wp--style--global--wide-size) !important;
+}
+
 .services-block {
+  --theme-color: #007cba;
   --spacing: 15px;
   --spacing-n: -15px;
   padding-left: var(--spacing);
@@ -16,38 +21,99 @@
   flex-wrap: wrap;
 }
 .services-block.has-1-cols .service-item {
-  --width: calc(100% / 1);
+  --width: 100%;
   max-width: var(--width);
   flex: 0 0 var(--width);
 }
 .services-block.has-2-cols .service-item {
-  --width: calc(100% / 2);
+  --width: 100%;
   max-width: var(--width);
   flex: 0 0 var(--width);
+}
+@media all and (min-width: 576px) {
+  .services-block.has-2-cols .service-item {
+    --width: calc(100% / 2);
+  }
 }
 .services-block.has-3-cols .service-item {
-  --width: calc(100% / 3);
+  --width: 100%;
   max-width: var(--width);
   flex: 0 0 var(--width);
+}
+@media all and (min-width: 576px) {
+  .services-block.has-3-cols .service-item {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-3-cols .service-item {
+    --width: calc(100% / 3);
+  }
 }
 .services-block.has-4-cols .service-item {
-  --width: calc(100% / 4);
+  --width: 100%;
   max-width: var(--width);
   flex: 0 0 var(--width);
+}
+@media all and (min-width: 576px) {
+  .services-block.has-4-cols .service-item {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-4-cols .service-item {
+    --width: calc(100% / 3);
+  }
+}
+@media all and (min-width: 1200px) {
+  .services-block.has-4-cols .service-item {
+    --width: calc(100% / 4);
+  }
 }
 .services-block.has-5-cols .service-item {
-  --width: calc(100% / 5);
+  --width: 100%;
   max-width: var(--width);
   flex: 0 0 var(--width);
 }
+@media all and (min-width: 576px) {
+  .services-block.has-5-cols .service-item {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-5-cols .service-item {
+    --width: calc(100% / 3);
+  }
+}
+@media all and (min-width: 1200px) {
+  .services-block.has-5-cols .service-item {
+    --width: calc(100% / 5);
+  }
+}
 .services-block.has-6-cols .service-item {
-  --width: calc(100% / 6);
+  --width: 100%;
   max-width: var(--width);
   flex: 0 0 var(--width);
+}
+@media all and (min-width: 576px) {
+  .services-block.has-6-cols .service-item {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-6-cols .service-item {
+    --width: calc(100% / 3);
+  }
+}
+@media all and (min-width: 1200px) {
+  .services-block.has-6-cols .service-item {
+    --width: calc(100% / 6);
+  }
 }
 
 .service-item {
-  padding: 0 var(--spacing) var(--spacing);
+  padding: 0 var(--spacing);
+  margin-bottom: var(--spacing);
 }
 
 .service-img-wrapper {
@@ -70,7 +136,12 @@
 }
 
 .service-name {
-  margin: 1em 0 0 !important;
+  padding: 0.7em 0.5em !important;
+  font-weight: 600;
+  margin: 0;
+  background-color: var(--theme-color);
+  color: #fff !important;
+  display: block;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

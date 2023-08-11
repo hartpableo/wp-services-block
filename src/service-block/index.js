@@ -18,7 +18,7 @@ registerBlockType( 'create-block/hart-service-item-block', {
 		},
 		imgSrc: {
 			type: "string",
-			default: "https://placehold.co/600x450"
+			default: "https://placehold.co/1000x1000"
 		},
 		imgAlt: {
 			type: "string"

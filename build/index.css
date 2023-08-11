@@ -53,11 +53,29 @@
   max-width: var(--width);
   flex: 0 0 var(--width);
 }
+@media all and (min-width: 576px) {
+  .services-block.has-2-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-2-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 2);
+  }
+}
 .services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
 .services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
   --width: calc(100% / 3);
   max-width: var(--width);
   flex: 0 0 var(--width);
+}
+@media all and (min-width: 576px) {
+  .services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-3-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 3);
+  }
 }
 .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
 .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
@@ -65,11 +83,47 @@
   max-width: var(--width);
   flex: 0 0 var(--width);
 }
+@media all and (min-width: 576px) {
+  .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 3);
+  }
+}
+@media all and (min-width: 1200px) {
+  .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-4-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 4);
+  }
+}
 .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
 .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
   --width: calc(100% / 5);
   max-width: var(--width);
   flex: 0 0 var(--width);
+}
+@media all and (min-width: 576px) {
+  .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 3);
+  }
+}
+@media all and (min-width: 1200px) {
+  .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-5-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 5);
+  }
 }
 .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
 .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
@@ -77,9 +131,28 @@
   max-width: var(--width);
   flex: 0 0 var(--width);
 }
+@media all and (min-width: 576px) {
+  .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 2);
+  }
+}
+@media all and (min-width: 992px) {
+  .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 3);
+  }
+}
+@media all and (min-width: 1200px) {
+  .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout > [aria-label="Block: Service Item"],
+  .services-block.has-6-cols > .block-editor-inner-blocks > .block-editor-block-list__layout .block-list-appender {
+    --width: calc(100% / 6);
+  }
+}
 .services-block .block-list-appender {
   position: static !important;
-  padding: 0 var(--spacing) var(--spacing);
+  padding: 0 var(--spacing);
+  margin-bottom: var(--spacing);
 }
 .services-block .block-list-appender > button {
   min-height: 150px;
